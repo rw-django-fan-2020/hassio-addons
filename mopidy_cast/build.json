@@ -2,6 +2,8 @@
   "build_from": {
     "armhf": "arm32v7/debian:bullseye",
     "armv7": "arm32v7/debian:bullseye",
-    "aarch64": "arm64v8/debian:bullseye"
+    "aarch64": "arm64v8/debian:bullseye",
+    "amd64": "amd64/debian:bullseye",
+    "i386": "i386/debian:bullseye"
   }
 }
