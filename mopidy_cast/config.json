@@ -6,7 +6,6 @@
   "url": "https://github.com/rw-django-fan-2020/hassio-addons/tree/master/mopidy_cast",
   "startup": "application",
   "boot": "auto",
-  "image": "rw-django-fan-2020/{arch}-mopidy-cast",
   "options": {
     "local_scan": true,
     "options": []
