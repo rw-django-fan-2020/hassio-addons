@@ -1,9 +1,9 @@
 {
-    "build_from" : {
-	"armhf" : "bestlibre/armhf-mopidy",
-	"armv7" : "bestlibre/armv7-mopidy",
-	"amd64" : "bestlibre/amd64-mopidy",
-	"aarch64" : "bestlibre/aarch64-mopidy",
-	"i386" : "bestlibre/i386-mopidy"
-    }
+	"build_from": {
+		"armhf": "rw-django-fan-2020/armhf-mopidy",
+		"armv7": "rw-django-fan-2020/armv7-mopidy",
+		"amd64": "rw-django-fan-2020/amd64-mopidy",
+		"aarch64": "rw-django-fan-2020/aarch64-mopidy",
+		"i386": "rw-django-fan-2020/i386-mopidy"
+	}
 }

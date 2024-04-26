@@ -1,9 +1,9 @@
 {
-    "build_from": {
-	"armhf" : "bestlibre/armhf-debian-base:stretch",
-    "armv7" : "bestlibre/armhf-debian-base:stretch",
-	"aarch64": "bestlibre/aarch64-debian-base:stretch",
-	"amd64" : "amd64/debian:stretch",
-	"i386" : "i386/debian:stretch"
-    }
+	"build_from": {
+		"armhf": "rw-django-fan-2020/armhf-debian-base:bullseye",
+		"armv7": "rw-django-fan-2020/armhf-debian-base:bullseye",
+		"aarch64": "rw-django-fan-2020/aarch64-debian-base:bullseye",
+		"amd64": "amd64/debian:bullseye",
+		"i386": "i386/debian:bullseye"
+	}
 }
