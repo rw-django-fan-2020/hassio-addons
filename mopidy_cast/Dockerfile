@@ -23,10 +23,16 @@ RUN set -ex \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	build-essential \
         curl \
-        gcc \
+        gcc
+
+RUN set -ex \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	gstreamer1.0-alsa \
 	gstreamer1.0-fluendo-mp3 \
-	gstreamer1.0-libav \
+	gstreamer1.0-libav
+
+RUN set -ex \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	libxml2-dev \
 	libxslt-dev \
 	libz-dev \
