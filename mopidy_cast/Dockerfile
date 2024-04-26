@@ -13,6 +13,7 @@ RUN if [ "$BUILD_ARCH" = "armhf" -o "$BUILD_ARCH" = "armv7" ]; then rm /usr/bin/
     elif [ "$BUILD_ARCH" = "aarch64" ]; then rm /usr/bin/qemu-arm-static;\
     fi
 
+#RUN Install 1
 RUN set -ex \
 #-------------------------------------------------------------------------
 #-------------------------------------------------------------------------
@@ -31,7 +32,11 @@ RUN set -ex \
 	libz-dev \
 	jq \
 	python-crypto \
-	python-dev \
+	python-dev
+
+#RUN Install 2
+RUN set -ex \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
  && curl -L https://apt.mopidy.com/mopidy.gpg -o /tmp/mopidy.gpg \
  && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
  && apt-key add /tmp/mopidy.gpg \
@@ -52,8 +57,12 @@ RUN set -ex \
 # && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 #-------------------------------------------------------------------------
 #-------------------------------------------------------------------------
+
+#RUN Install 3
+RUN set -ex \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 # && apt-get update \
-# && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         curl jq git build-essential \
 		libasound2-dev libvorbisidec-dev libvorbis-dev libflac-dev alsa-utils libavahi-client-dev avahi-daemon \
 #	build-essential \
