@@ -1,9 +1,0 @@
-{
-	"build_from": {
-		"armhf": "rw-django-fan-2020/armhf-mopidy",
-		"armv7": "rw-django-fan-2020/armv7-mopidy",
-		"amd64": "rw-django-fan-2020/amd64-mopidy",
-		"aarch64": "rw-django-fan-2020/aarch64-mopidy",
-		"i386": "rw-django-fan-2020/i386-mopidy"
-	}
-}
