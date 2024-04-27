@@ -1,11 +1,13 @@
-FROM %%BASE_IMAGE%%
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
-ENV LANG C.UTF-8
+#ENV LANG C.UTF-8
 
 #Install snapcastclient
 RUN apk upgrade --no-cache --available \
- && apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
-        snapcast-server
+# && apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
+#        snapcast-server
+  && apk add snapcast-server
 
 # Copy data for add-on
 COPY run.sh /
