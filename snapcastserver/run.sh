@@ -33,7 +33,8 @@ echo "[logging]" >> "${config}"
 echo "debug = $(bashio::config 'logging.enabled')" >> "${config}"
 
 echo "[server]" >> "${config}"
-echo "threads = $(bashio::config 'server.threads')" >> "${config}"
+bashio::log.info "threads = $(bashio::config 'server.threads')"
+#echo "threads = $(bashio::config 'server.threads')" >> "${config}"
 
 echo "[server]" >> "${config}"
 echo "datadir = $(bashio::config 'server.datadir')" >> "${config}"
