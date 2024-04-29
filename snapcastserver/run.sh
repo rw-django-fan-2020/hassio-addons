@@ -3,6 +3,8 @@
 mkdir -p /share/snapfifo
 mkdir -p /share/snapcast
 
+cp /etc/snapserver.conf /share/snapcast/snapserver.conf
+
 config=/etc/snapserver.conf
 
 if ! bashio::fs.file_exists '/etc/snapserver.conf'; then
@@ -41,4 +43,4 @@ echo "datadir = $(bashio::config 'server.datadir')" >> "${config}"
 
 bashio::log.info "Starting SnapServer..."
 
-/usr/bin/snapserver -c /etc/snapserver.conf
+/usr/bin/snapserver -c /share/snapcast/snapserver.conf
