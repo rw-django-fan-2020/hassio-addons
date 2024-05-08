@@ -1,8 +1,9 @@
-## 1.8.0 - 2024-05-07
+## 1.8.0 - 2024-05-08
 
 * 🔼 Updated alpine image to `3.19`
-* 🔼 Updated mpc to `3.19`
-* 🔼 Updated mpd to `0.23.15-r2`
+* 🔼 Updated mpc to `0.34-r0`
+* 🔼 Updated mpd to `0.23.14-r1`
+* 🔼 Updated ympd to `1.3.0-r12`
 
 
 ## 1.7.2 - 2022-08-17
