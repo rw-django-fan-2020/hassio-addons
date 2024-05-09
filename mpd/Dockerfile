@@ -9,7 +9,7 @@ ARG MPC_VERSION
 #ENV MPD_VERSION=${MPD_VERSION}
 #ENV YMPD_VERSION=${YMPD_VERSION}
 
-RUN apk add --no-cache mpc=${MPC_VERSION} mpd=${MPD_VERSION} ympd=${YMPD_VERSION}
+RUN apk add --no-cache mpc=$MPC_VERSION mpd=$MPD_VERSION ympd=$YMPD_VERSION
 
 ENTRYPOINT [ "/init" ]
 CMD []
