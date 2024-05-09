@@ -2,13 +2,14 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ARG MPC_VERSION
-ENV MPC_VERSION=${MPC_VERSION}
-#ENV mpc_version="0.34-r0"
+ARG MPD_VERSION
+ARG MPC_VERSION
 
-#https://pkgs.alpinelinux.org/packages?name=mpc&branch=v3.19&repo=&arch=&maintainer=
-#https://pkgs.alpinelinux.org/packages?name=mpd&branch=v3.19&repo=&arch=&maintainer=
-#https://pkgs.alpinelinux.org/packages?name=ympd&branch=v3.19&repo=&arch=&maintainer=
-RUN apk add --no-cache mpc=$MPC_VERSION mpd=0.23.14-r1 ympd=1.3.0-r12
+ENV MPC_VERSION=${MPC_VERSION}
+ENV MPD_VERSION=${MPD_VERSION}
+ENV YMPD_VERSION=${YMPD_VERSION}
+
+RUN apk add --no-cache mpc=$MPC_VERSION mpd=$MPD_VERSION ympd=$YMPD_VERSION
 
 ENTRYPOINT [ "/init" ]
 CMD []
