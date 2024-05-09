@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ARG mpc_version
-ENV mpc_version=${mpc_version}
+#ENV mpc_version=${mpc_version}
 #ENV mpc_version="0.34-r0"
 
 #https://pkgs.alpinelinux.org/packages?name=mpc&branch=v3.19&repo=&arch=&maintainer=
