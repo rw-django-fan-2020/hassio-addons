@@ -1,0 +1,20 @@
+configuration:
+  use_custom_config:
+    name: use_custom_config
+    description: enable custom config options
+  stream:
+    name: stream
+    description: source URI of the PCM input stream, can be configured multiple times
+  http:
+    name: http
+    description: enable HTTP Json RPC (HTTP POST and websockets)
+  tcp:
+    name: tcp
+    description: enable TCP Json RPC
+  logging:
+    name: logging
+    description: logging
+    enabled: str?
+  server:
+    name: server
+    description: Number of additional worker threads to use

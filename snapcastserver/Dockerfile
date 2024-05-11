@@ -5,7 +5,8 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 #Install snapcast
-RUN sed -i -e 's/v[[:digit:]]\..*\//edge\//g' /etc/apk/repositories && apk add --no-cache snapcast bash
+ARG SNAPCAST_VERSION
+RUN sed -i -e 's/v[[:digit:]]\..*\//edge\//g' /etc/apk/repositories && apk add --no-cache snapcast-server=$SNAPCAST_VERSION bash
 
 
 
