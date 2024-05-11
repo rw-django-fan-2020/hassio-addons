@@ -2,6 +2,7 @@ name: snapcast-server
 version: '0.28.0-r1'
 slug: snapcastserver
 description: Snapcast Server
+panel_icon: mdi:music-box-outline
 url: https://github.com/rw-django-fan-2020/hassio-addons/tree/master/snapcastserver
 ingress: true
 ingress_port: 1780
@@ -11,6 +12,7 @@ init: false
 map:
 - share:rw
 options:
+  use_custom_config: false
   stream:
     sources:
     - pipe:///share/snapfifo/snapfifo?name=default
@@ -32,6 +34,7 @@ options:
     threads: "-1"
     datadir: "/share/snapcast/"
 schema:
+  use_custom_config: bool
   stream:
     sources:
     - str?
