@@ -2,6 +2,7 @@
 
 mkdir -p /share/snapfifo
 mkdir -p /share/snapcast
+mkdir -p /share/snapserver
 
 if ! bashio::fs.file_exists '/share/snapcast/snapserver.conf'; then
     bashio::log.info "copy /etc/snapserver.conf to /share/snapcast/snapserver.conf"
