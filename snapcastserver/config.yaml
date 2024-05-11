@@ -3,6 +3,8 @@ version: '0.28.0-r1'
 slug: snapcastserver
 description: Snapcast Server
 url: https://github.com/rw-django-fan-2020/hassio-addons/tree/master/snapcastserver
+ingress: true
+ingress_port: 1780
 startup: system
 boot: auto
 init: false
