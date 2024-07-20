@@ -5,7 +5,7 @@ ARG MPC_VERSION
 ARG MPD_VERSION
 ARG YMPD_VERSION
 
-RUN apk add --no-cache mpc=$MPC_VERSION mpd=$MPD_VERSION ympd=$YMPD_VERSION
+RUN apk add --no-cache mpc=$MPC_VERSION mpd=$MPD_VERSION ympd=$YMPD_VERSION ffmpeg ffmpeg-libavcodec
 
 ENTRYPOINT [ "/init" ]
 CMD []

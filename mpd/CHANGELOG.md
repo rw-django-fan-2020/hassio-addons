@@ -1,3 +1,9 @@
+## 1.8.1 - 2024-07-21
+
+* 🔼 Added ffmpeg
+* 🔼 Added ffmpeg-libavcodec
+
+
 ## 1.8.0 - 2024-05-08
 
 * 🔼 Updated alpine image to `3.19`
