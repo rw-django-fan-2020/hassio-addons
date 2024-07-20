@@ -1,0 +1,10 @@
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+ARG OPENSSL_VERSION
+
+RUN apk add --no-cache mpc=$OPENSSL_VERSION
+
+ENTRYPOINT [ "/init" ]
+CMD []
+COPY root /

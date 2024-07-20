@@ -1,0 +1,28 @@
+name: OCSP-Server
+version: 1.8.0
+slug: ocsp_server
+#https://pictogrammers.com/library/mdi/
+panel_icon: mdi:certificate-outline
+description: The Online Certificate Status Protocol (OCSP) 
+  enables applications to determine the (revocation) state of an identified certificate (RFC 2560).
+url: https://github.com/rw-django-fan-2020/hassio-addons/tree/master/ocsp_server
+#ingress: true
+#ingress_port: 6680
+arch:
+  - armv7
+  - armhf
+  - aarch64
+  - amd64
+  - i386
+#image: ghcr.io/poeschl/ha-mpd-{arch}
+init: false
+map:
+  - addons:rw
+ports:
+  6680/tcp: null
+ports_description:
+  6680/tcp: Web Frontend (Not needed with ingress feature)
+options:
+  media_folder: /media/mpd/media
+schema:
+  media_folder: match(/share/.+|/media/.+|(smb|nfs)://.+)
