@@ -1,0 +1,19 @@
+{
+  "name": "Aubio Beat Detection",
+  "version": "1.0",
+  "slug": "aubio_beat",
+  "description": "Detects beats via aubio and exposes them via REST",
+  "arch": ["aarch64", "amd64", "armv7", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "hassio_api": false,
+  "hassio_role": "default",
+  "homeassistant_api": false,
+  "host_network": true,
+  "options": {
+    "fifo_path": "/share/beat_fifo"
+  },
+  "schema": {
+    "fifo_path": "str"
+  }
+}
