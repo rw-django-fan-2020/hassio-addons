@@ -8,7 +8,7 @@ import yaml
 
 # 1. Setze log_level und fifo_path
 log_level = "DEBUG"
-fifo_path = /share/snapfifo/snapfifo"
+fifo_path = "/share/snapfifo/snapfifo"
 
 # 2. Config.yaml lesen, falls vorhanden
 try:
@@ -16,7 +16,7 @@ try:
         config = yaml.safe_load(f)
         if config:
             if "log_level" in config:
-                log_level = config["log_level"]
+                log_level = config["log_level"].upper()
             if "fifo_path" in config:
                 fifo_path = config["fifo_path"]
 except FileNotFoundError:
