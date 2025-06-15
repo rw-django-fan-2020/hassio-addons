@@ -14,3 +14,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && apt-get purge -y build-essential python3-dev gcc \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY run.sh /run.sh
+COPY beat_service.py /app/beat_service.py
+RUN chmod +x /run.sh
+
+CMD [ "/run.sh" ]
