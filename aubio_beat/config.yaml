@@ -1,0 +1,21 @@
+name: Aubio Beat Detector
+version: "1.0"
+slug: aubio_beat
+description: Detects beats in audio streams using aubio and exposes them via HTTP
+url: https://github.com/dein-name/aubio_beat_addon
+startup: services
+boot: auto
+arch:
+  - amd64
+  - aarch64
+  - armv7
+  - armhf
+  - i386
+map:
+  - share:rw
+ports:
+  5000/tcp: 5000
+options:
+  fifo_path: /share/snapfifo/snapfifo
+schema:
+  fifo_path: str
