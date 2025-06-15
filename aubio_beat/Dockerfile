@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pkg-config \
  && pip install --no-cache-dir numpy \
  && pip install --no-cache-dir flask aubio \
- && pip install --no-cache-dir pyyaml \
  && apt-get purge -y build-essential python3-dev gcc \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
