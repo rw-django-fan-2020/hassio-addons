@@ -4,9 +4,25 @@ import aubio
 import numpy as np
 from flask import Flask, jsonify
 import threading
+import yaml
+
+# 1. Setze log_level und fifo_path
+log_level = "DEBUG"
+fifo_path = /share/snapfifo/snapfifo"
+
+# 2. Config.yaml lesen, falls vorhanden
+try:
+    with open("config.yaml", "r") as f:
+        config = yaml.safe_load(f)
+        if config:
+            if "log_level" in config:
+                log_level = config["log_level"]
+            if "fifo_path" in config:
+                fifo_path = config["fifo_path"]
+except FileNotFoundError:
+    pass
 
 # Logging einrichten
-log_level = os.environ.get("LOG_LEVEL", "DEBUG").upper()
 numeric_level = getattr(logging, log_level, logging.DEBUG)
 logging.basicConfig(level=numeric_level, format='[%(levelname)s] %(message)s')
 logger = logging.getLogger("beat-addon")
@@ -15,7 +31,6 @@ app = Flask(__name__)
 last_beat = {'volume': 0.0}
 
 def process_fifo():
-    fifo_path = os.environ.get("FIFO_PATH", "/share/beat_fifo")
     if not os.path.exists(fifo_path):
         logger.info(f"FIFO not found at {fifo_path}, creating it...")
         os.mkfifo(fifo_path)

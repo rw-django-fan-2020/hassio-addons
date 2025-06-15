@@ -16,6 +16,18 @@ map:
 ports:
   5000/tcp: 5000
 options:
+  log_level:
+    type: string
+    default: DEBUG
+    description: "Set the logging level"
+    example: DEBUG
+    options:
+      DEBUG: "Debug level, detailed information"
+      INFO: "Info level, general runtime events"
+      WARNING: "Warning level, something unexpected happened"
+      ERROR: "Error level, serious problems"
+      CRITICAL: "Critical level, very serious errors"
   fifo_path: /share/snapfifo/snapfifo
 schema:
   fifo_path: str
+  log_level: str
