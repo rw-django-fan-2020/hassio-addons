@@ -20,4 +20,4 @@ options:
   fifo_path: /share/snapfifo/snapfifo
 schema:
   fifo_path: str
-  log_level: enum(info|debug|warning|error|critical)
+  log_level: list(info|debug|warning|error|critical)
