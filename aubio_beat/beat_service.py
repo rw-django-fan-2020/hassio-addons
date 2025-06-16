@@ -30,33 +30,37 @@ logger = logging.getLogger("beat-addon")
 app = Flask(__name__)
 last_beat = {'volume': 0.0}
 
-def process_fifo():
+def process_fifo(fifo_path):
+    logger.info(f"Using FIFO path: {fifo_path}")
+    
     if not os.path.exists(fifo_path):
-        logger.info(f"FIFO not found at {fifo_path}, creating it...")
+        logger.info("FIFO does not exist, creating it...")
         os.mkfifo(fifo_path)
-    else:
-        logger.info(f"Using existing FIFO at {fifo_path}")
 
     try:
         with open(fifo_path, 'rb', buffering=0) as f:
             win_s = 1024
-            hop_s = win_s // 2
+            hop_s = 512  # aubio.tempo expects hop_s-sized input
             samplerate = 44100
             beat_o = aubio.tempo("default", win_s, hop_s, samplerate)
-            logger.info("Started beat detection loop")
 
+            logger.info("Starting beat detection loop...")
             while True:
-                data = f.read(win_s * 2)
-                if not data:
+                data = f.read(hop_s * 2)  # int16 = 2 bytes per sample
+                if not data or len(data) < hop_s * 2:
                     continue
                 samples = np.frombuffer(data, dtype=np.int16).astype(np.float32) / 32768.0
-                is_beat = beat_o(samples)
-                volume = float(np.sqrt(np.mean(samples**2)))
-                if is_beat:
-                    last_beat['volume'] = volume
-                    logger.debug(f"Beat detected, volume: {volume:.4f}")
+                try:
+                    is_beat = beat_o(samples)
+                    volume = np.sqrt(np.mean(samples**2))
+                    if is_beat:
+                        logger.debug(f"Beat detected! Volume: {volume}")
+                        # Update global or shared state here
+                except Exception as e:
+                    logger.error(f"Error in beat processing: {e}")
     except Exception as e:
-        logger.exception(f"Error in FIFO processing: {e}")
+        logger.exception(f"Error opening FIFO: {e}")
+
 
 @app.route('/beat', methods=['GET'])
 def beat():
