@@ -30,7 +30,7 @@ logger = logging.getLogger("beat-addon")
 app = Flask(__name__)
 last_beat = {'volume': 0.0}
 
-def process_fifo(fifo_path):
+def process_fifo():
     logger.info(f"Using FIFO path: {fifo_path}")
     
     if not os.path.exists(fifo_path):
