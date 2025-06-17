@@ -16,7 +16,7 @@ map:
 ports:
   5000/tcp: 5000
 options:
-  fifo_path: /share/snapfifo/snapfifo
+  fifo_path: /share/snapfifo/beatfifo
   log_level: info
 schema:
   fifo_path: str

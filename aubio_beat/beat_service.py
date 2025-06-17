@@ -7,13 +7,15 @@ import threading
 import yaml
 
 # 1. Setze log_level und fifo_path
-log_level = os.environ.get("LOG_LEVEL").upper()
-if not log_level:
-    raise ValueError("LOG_LEVEL is not set. Please check add-on config.")
+log_level = "DEBUG"
+fifo_path = "/share/snapfifo/snapfifo"
+#log_level = os.environ.get("LOG_LEVEL").upper()
+#if not log_level:
+#    raise ValueError("LOG_LEVEL is not set. Please check add-on config.")
 
-fifo_path = os.environ.get("FIFO_PATH")
-if not fifo_path:
-    raise ValueError("FIFO_PATH is not set. Please check add-on config.")
+#fifo_path = os.environ.get("FIFO_PATH")
+#if not fifo_path:
+#    raise ValueError("FIFO_PATH is not set. Please check add-on config.")
 
 
 # Logging einrichten
