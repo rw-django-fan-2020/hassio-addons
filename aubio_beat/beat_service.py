@@ -24,7 +24,7 @@ logging.basicConfig(level=numeric_level, format='[%(levelname)s] %(message)s')
 logger = logging.getLogger("beat-addon")
 
 app = Flask(__name__)
-last_beat = {'volume': 0.0}
+last_beat = {}
 
 def process_fifo():
     logger.info(f"Using FIFO path: {fifo_path}")
@@ -50,8 +50,11 @@ def process_fifo():
                     is_beat = beat_o(samples)
                     volume = np.sqrt(np.mean(samples**2))
                     if is_beat:
+                        last_beat = {'volume': volume}
                         logger.debug(f"Beat detected! Volume: {volume}")
                         # Update global or shared state here
+                    else:
+                        last_beat = {}
                 except Exception as e:
                     logger.error(f"Error in beat processing: {e}")
     except Exception as e:
