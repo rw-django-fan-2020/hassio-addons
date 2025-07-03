@@ -1,3 +1,10 @@
+## 1.9.0 - 2025-07-03
+
+* 🔼 Updated alpine image to `3.22`
+* 🔼 Updated mpc to `0.35-r0`
+* 🔼 Updated mpd to `0.24.4-r1`
+
+
 ## 1.8.0 - 2024-05-08
 
 * 🔼 Updated alpine image to `3.19`
