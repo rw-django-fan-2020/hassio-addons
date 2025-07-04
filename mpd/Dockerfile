@@ -5,7 +5,7 @@ ARG MPC_VERSION
 ARG MPD_VERSION
 ARG MYMPD_VERSION
 
-RUN apk add --no-cache mpc=$MPC_VERSION mpd=$MPD_VERSION ympd=$MYMPD_VERSION
+RUN apk add --no-cache mpc=$MPC_VERSION mpd=$MPD_VERSION mympd=$MYMPD_VERSION
 
 ENTRYPOINT [ "/init" ]
 CMD []
