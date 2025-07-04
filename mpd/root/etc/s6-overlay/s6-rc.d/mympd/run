@@ -7,20 +7,15 @@ export LD_PRELOAD="/usr/local/lib/libjemalloc.so.2"
 
 export MYMPD_HTTP_PORT=${INGRESS_PORT:-8080}
 
-CONFIG_FILE="/data/config"
+CONFIG_FOLDER="/addons/mpd/mympd"
 
-# Wenn Konfig nicht existiert, erstelle Standard
-if ! [ -f "$CONFIG_FILE" ]; then
-  mympd -c
-  cp -r /var/lib/mympd/config "$CONFIG_FILE"
-  bashio::log.info "Standard-Konfig erzeugt."
-else
-  cp -r "$CONFIG_FILE" /var/lib/mympd/config
+if ! [ -f "$CONFIG_FOLDER" ]; then
+  mkdir -p "$CONFIG_FOLDER"
+  bashio::log.info "mkdir $CONFIG_FOLDER"
 fi
-
 
 chown root:root /usr/bin/mympd
 chmod 0774 /usr/bin/mympd
 
 bashio::log.info  'Start mympd'
-mympd
+mympd --workdir "$CONFIG_FOLDER"

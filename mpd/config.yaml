@@ -21,6 +21,7 @@ devices:
 map:
   - share:rw
   - media:rw
+  - addons:rw
 ports:
   8080/tcp: null
   6600/tcp: 6600
