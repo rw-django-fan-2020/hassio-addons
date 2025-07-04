@@ -5,6 +5,20 @@ bashio::net.wait_for 6600
 # Enable Jemalloc for better memory handling
 export LD_PRELOAD="/usr/local/lib/libjemalloc.so.2"
 
+export MYMPD_HTTP_PORT=${INGRESS_PORT:-8080}
+
+CONFIG_FILE="/data/config"
+
+# Wenn Konfig nicht existiert, erstelle Standard
+if ! [ -f "$CONFIG_FILE" ]; then
+  mympd -c
+  cp -r /var/lib/mympd/config "$CONFIG_FILE"
+  bashio::log.info "Standard-Konfig erzeugt."
+else
+  cp -r "$CONFIG_FILE" /var/lib/mympd/config
+fi
+
+
 chown root:root /usr/bin/mympd
 chmod 0774 /usr/bin/mympd
 
