@@ -2,7 +2,7 @@
 
 * 🔼 Replace ympd with myMPD
 
-* 
+
 ## 1.9.0 - 2025-07-03
 
 * 🔼 Updated alpine image to `3.22`
