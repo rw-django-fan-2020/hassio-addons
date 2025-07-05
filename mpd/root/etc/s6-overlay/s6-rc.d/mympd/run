@@ -13,6 +13,7 @@ if ! [ -f "$CONFIG_FOLDER" ]; then
 
   export MYMPD_SSL=false
 
+  bashio::log.info "mympd --workdir "$CONFIG_FOLDER" --config"
   mympd --workdir "$CONFIG_FOLDER" --config
 fi
 
