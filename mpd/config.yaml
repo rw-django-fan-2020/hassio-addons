@@ -1,12 +1,12 @@
 name: MPD
-version: 1.9.0
+version: 2.0.0
 slug: mpd
 panel_icon: mdi:music-circle
 description: Music Player Daemon is a free and open source music player. It
   plays audio files, organizes playlists and maintains a music database
 url: https://github.com/rw-django-fan-2020/hassio-addons/tree/master/mpd
 ingress: true
-ingress_port: 6680
+ingress_port: 8080
 arch:
   - armv7
   - armhf
@@ -21,12 +21,13 @@ devices:
 map:
   - share:rw
   - media:rw
+  - addons:rw
 ports:
-  6680/tcp: null
+  8080/tcp: null
   6600/tcp: 6600
   8000/tcp: null
 ports_description:
-  6680/tcp: Web Frontend (Not needed with ingress feature)
+  8080/tcp: Web Frontend (Not needed with ingress feature)
   6600/tcp: MDP Connection
   8000/tcp: HTTPd Connection (if enabled)
 options:
