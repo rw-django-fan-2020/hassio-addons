@@ -1,7 +1,9 @@
 # MPD
 
 [MPD](https://www.musicpd.org/) is a free and open source music player. It plays audio files, organizes playlists and maintains a music database. For interaction client software is needed.
-Inside this addon there is [ympd](https://ympd.org/), a simple web frontend for interacting.
+Inside this addon there is [myMPD](https://jcorporation.github.io/myMPD/), a standalone and mobile friendly web-based MPD client with a tiny footprint and advanced features.
+
+Bonus: You can use MPD as DLNA Renderer. This is possible by support from [upmpdcli](https://www.lesbonscomptes.com/upmpdcli/), a UPnP Media Renderer front-end for MPD, the Music Player Daemon
 
 ![Addon Stage][stage-badge]
 ![Supports aarch64 Architecture][aarch64-badge]
