@@ -17,3 +17,4 @@ fi
 
 bashio::log.info  'Start upmpdcli'
 upmpdcli -c "$CONFIG_FOLDER/upmpdcli.conf"
+bashio::log.info  "$CONFIG_FOLDER/upmpdcli.conf"
