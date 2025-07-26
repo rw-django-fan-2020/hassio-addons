@@ -9,9 +9,9 @@ CONFIG_FOLDER="/addons/mpd/upmpdcli"
 
 if ! [ -f "$CONFIG_FOLDER" ]; then
   mkdir -p "$CONFIG_FOLDER"
-  bashio::log.info "mkdir $CONFIG_FOLDER"
+  #bashio::log.info "mkdir $CONFIG_FOLDER"
 
-  bashio::log.info "mympd --workdir "$CONFIG_FOLDER" --config"
+  #bashio::log.info "cp /etc/upmpdcli.conf "$CONFIG_FOLDER/upmpdcli.conf""
   cp /etc/upmpdcli.conf "$CONFIG_FOLDER/upmpdcli.conf"
 fi
 

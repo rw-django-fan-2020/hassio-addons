@@ -27,13 +27,13 @@ ports:
   6600/tcp: 6600
   8000/tcp: null
   1900/udp: 1900
-  49153/tcp: 49153
+  49152/tcp: 49152
 ports_description:
   8080/tcp: Web Frontend (Not needed with ingress feature)
   6600/tcp: MDP Connection
   8000/tcp: HTTPd Connection (if enabled)
   1900/udp: SSDP (Discovery)
-  49153/tcp: Port number used for UPnP
+  49152/tcp: Port number used for UPnP
 options:
   media_folder: /media/mpd/media
   playlist_folder: /media/mpd/playlists
