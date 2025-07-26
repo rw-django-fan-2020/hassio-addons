@@ -14,7 +14,7 @@ arch:
   - amd64
   - i386
 #image: ghcr.io/poeschl/ha-mpd-{arch}
-host_network: true
+#host_network: true
 init: false
 audio: true
 devices:
