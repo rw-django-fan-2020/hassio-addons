@@ -1,4 +1,4 @@
-name: MPD
+name: MPD + UPMPDCLI
 version: 2.1.0
 slug: mpd
 panel_icon: mdi:music-circle
@@ -14,7 +14,7 @@ arch:
   - amd64
   - i386
 #image: ghcr.io/poeschl/ha-mpd-{arch}
-#host_network: true
+host_network: true
 init: false
 audio: true
 devices:
