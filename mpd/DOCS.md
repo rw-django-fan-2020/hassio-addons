@@ -71,4 +71,4 @@ media_player:
 
 # UPMPDCLI
 
-ToDo: Write a Description
+To change the config you have to edit the file `\addons\mpd\upmpdcli\upmpdcli.conf`

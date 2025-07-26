@@ -1,4 +1,4 @@
-name: MPD + UPMPDCLI
+name: MPD
 version: 2.1.0
 slug: mpd
 panel_icon: mdi:music-circle
@@ -28,15 +28,13 @@ ports:
   6600/tcp: 6600
   8000/tcp: null
   1900/udp: 1900
-  49152/tcp: 49152
   9998/tcp: 9998
 ports_description:
   8080/tcp: Web Frontend (Not needed with ingress feature)
   6600/tcp: MDP Connection
   8000/tcp: HTTPd Connection (if enabled)
   1900/udp: SSDP (Discovery)
-  49152/tcp: Port number used for UPnP
-  9998/tcp: Port number used for UPnP (2)
+  9998/tcp: Port number used for UPnP
 options:
   media_folder: /media/mpd/media
   playlist_folder: /media/mpd/playlists
