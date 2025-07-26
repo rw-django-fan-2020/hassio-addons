@@ -68,3 +68,7 @@ media_player:
     host: 243ffc37-mpd
     port: 6600
 ```
+
+# UPMPDCLI
+
+To change the config you have to edit the file `\addons\mpd\upmpdcli\upmpdcli.conf`
