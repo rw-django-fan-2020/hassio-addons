@@ -16,5 +16,5 @@ if ! [ -d "$CONFIG_FOLDER" ]; then
 fi
 
 bashio::log.info  'Start upmpdcli'
-bashio::log.info  "$CONFIG_FOLDER/upmpdcli.conf"
+bashio::log.info  "upmpdcli -c $CONFIG_FOLDER/upmpdcli.conf"
 upmpdcli -c "$CONFIG_FOLDER/upmpdcli.conf"
