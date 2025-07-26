@@ -1,5 +1,5 @@
 name: MPD
-version: 2.0.0
+version: 2.1.0
 slug: mpd
 panel_icon: mdi:music-circle
 description: Music Player Daemon is a free and open source music player. It
@@ -26,10 +26,14 @@ ports:
   8080/tcp: null
   6600/tcp: 6600
   8000/tcp: null
+  1900/udp: 1900
+  49153/tcp: 49153
 ports_description:
   8080/tcp: Web Frontend (Not needed with ingress feature)
   6600/tcp: MDP Connection
   8000/tcp: HTTPd Connection (if enabled)
+  1900/udp: SSDP (Discovery)
+  49153/tcp: Port number used for UPnP
 options:
   media_folder: /media/mpd/media
   playlist_folder: /media/mpd/playlists
