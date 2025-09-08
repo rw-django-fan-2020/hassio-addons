@@ -1,5 +1,5 @@
 name: snapcast-server
-version: '0.28.0-r1'
+version: '0.31.0-r0'
 slug: snapcastserver
 description: Snapcast Server
 panel_icon: mdi:music-box-outline
@@ -56,12 +56,12 @@ ports:
   1704/tcp: 1704
   1705/tcp: 1705
   1780/tcp: 1780
-#  4953/tcp: 4953
+  4953/tcp: 4953
 ports_description:
   1704/tcp: which port the server should listen to
   1705/tcp: TCP Json RPC
   1780/tcp: HTTP Json RPC (if enabled)
-#  4953/tcp: HTTPd Connection (if enabled)
+  4953/tcp: HTTPd Connection (if enabled)
 arch:
 - armhf
 - armv7
