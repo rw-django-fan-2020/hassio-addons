@@ -1,5 +1,5 @@
 name: snapcast-server
-version: '0.31.0-r0'
+version: '0.32.3-r0'
 slug: snapcastserver
 description: Snapcast Server
 panel_icon: mdi:music-box-outline
