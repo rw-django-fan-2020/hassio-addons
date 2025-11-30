@@ -53,6 +53,7 @@ RUN git clone https://github.com/MusicPlayerDaemon/MPD.git /tmp/mpd \
     && git checkout $MPD_VERSION \
     && meson setup . output/release \
         --buildtype=release \
+        --prefix=/usr \
         -Dsysconfdir='/etc' \
     && ninja -C output/release \
     && ninja -C output/release install \
