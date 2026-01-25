@@ -14,10 +14,10 @@ options:
   allowed_pubkeys: []
 schema:
   relays:
-    type: array(str)
+    type: list(str)
   n8n_webhook:
     type: str
   allowed_pubkeys:
-    type: array(str)?
+    type: list(str)
 environment:
   PYTHONUNBUFFERED: "1"
