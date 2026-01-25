@@ -1,0 +1,22 @@
+name: Nostr Gateway
+slug: nostr_gateway
+description: Nostr DM Gateway → n8n
+version: "0.1.0"
+startup: services
+boot: auto
+arch:
+  - amd64
+  - aarch64
+options:
+  relays:
+    - wss://relay.damus.io
+  n8n_webhook: http://n8n:5678/webhook/nostr-ai
+  allowed_pubkeys: []
+schema:
+  relays:
+    - str
+  n8n_webhook: str
+  allowed_pubkeys:
+    - str?
+environment:
+  PYTHONUNBUFFERED: "1"
