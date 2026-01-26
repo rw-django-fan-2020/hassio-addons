@@ -5,8 +5,12 @@ version: "0.1.0"
 startup: services
 boot: auto
 arch:
-  - amd64
+arch:
+  - armv7
+  - armhf
   - aarch64
+  - amd64
+  - i386
 options:
   relays:
     - wss://relay.damus.io
