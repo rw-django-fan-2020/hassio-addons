@@ -5,7 +5,6 @@ version: "0.1.0"
 startup: services
 boot: auto
 arch:
-arch:
   - armv7
   - armhf
   - aarch64
@@ -17,6 +16,8 @@ options:
   n8n_webhook: http://n8n:5678/webhook/nostr-ai
   allowed_pubkeys: []
 schema:
+  domains:
+    - str
   relays:
     type: list(str)
   n8n_webhook:
