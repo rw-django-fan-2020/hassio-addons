@@ -4,7 +4,7 @@ slug: mpd
 panel_icon: mdi:music-circle
 description: Music Player Daemon is a free and open source music player. It
   plays audio files, organizes playlists and maintains a music database
-url: https://github.com/rw-django-fan-2020/hassio-addons/tree/master/mpd
+url: https://github.com/rw-django-fan-2020/hassio-addons/tree/main/mpd
 ingress: true
 ingress_port: 8080
 arch:
@@ -13,7 +13,6 @@ arch:
   - aarch64
   - amd64
   - i386
-#image: ghcr.io/poeschl/ha-mpd-{arch}
 host_network: true
 init: false
 audio: true
