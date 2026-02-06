@@ -1,3 +1,11 @@
+## 3.0.0 - 2026-02-06
+
+* 🔼 Updated alpine image to `3.23`
+* 🔼 Updated mpd to `0.24.8-r0`
+* 🔼 Updated myMPD to `23.0.1-r0`
+* 🔼 Updated upmpdcli to `1.9.7-r0`
+
+
 ## 2.1.0 - 2025-07-26
 
 * 🔼 Add DLNA Server/Renderer and Bridge upmpdcli
