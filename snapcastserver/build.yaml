@@ -1,3 +1,3 @@
-#https://pkgs.alpinelinux.org/packages?name=snapcast-server&branch=edge&repo=&arch=&maintainer=
+#https://pkgs.alpinelinux.org/packages?name=snapcast-server&branch=v3.23&repo=&arch=&origin=&flagged=&maintainer=
 args:
-  SNAPCAST_VERSION: "0.32.3-r0"
+  SNAPCAST_VERSION: "0.34.0-r0"
