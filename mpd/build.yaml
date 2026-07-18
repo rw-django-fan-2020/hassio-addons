@@ -1,16 +1,13 @@
 build_from:
-  armhf: ghcr.io/home-assistant/armhf-base:3.23
-  armv7: ghcr.io/home-assistant/armv7-base:3.23
-  aarch64: ghcr.io/home-assistant/aarch64-base:3.23
-  amd64: ghcr.io/home-assistant/amd64-base:3.23
-  i386: ghcr.io/home-assistant/i386-base:3.23
+  aarch64: ghcr.io/home-assistant/aarch64-base:3.24
+  amd64: ghcr.io/home-assistant/amd64-base:3.24
 
-#https://pkgs.alpinelinux.org/packages?name=mpc&branch=v3.23&repo=&arch=&origin=&flagged=&maintainer=
-#https://pkgs.alpinelinux.org/packages?name=mpd&branch=v3.23&repo=&arch=&origin=&flagged=&maintainer=
-#https://pkgs.alpinelinux.org/packages?name=mympd&branch=v3.23&repo=&arch=&origin=&flagged=&maintainer=
-#https://pkgs.alpinelinux.org/packages?name=upmpdcli&branch=v3.23&repo=&arch=&origin=&flagged=&maintainer=
+#https://pkgs.alpinelinux.org/packages?name=mpc&branch=v3.24&repo=&arch=&origin=&flagged=&maintainer=
+#https://pkgs.alpinelinux.org/packages?name=mpd&branch=v3.24&repo=&arch=&origin=&flagged=&maintainer=
+#https://pkgs.alpinelinux.org/packages?name=mympd&branch=v3.24&repo=&arch=&origin=&flagged=&maintainer=
+#https://pkgs.alpinelinux.org/packages?name=upmpdcli&branch=v3.24&repo=&arch=&origin=&flagged=&maintainer=
 args:
   MPC_VERSION: "0.35-r0"
-  MPD_VERSION: "0.24.8-r0"
-  MYMPD_VERSION: "23.0.1-r0"
-  UPMPDCLI_VERSION: "1.9.7-r0"
+  MPD_VERSION: "0.24.12-r0"
+  MYMPD_VERSION: "25.1.1-r0"
+  UPMPDCLI_VERSION: "1.9.17-r0"
