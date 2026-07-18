@@ -1,3 +1,11 @@
+## 3.1.0 - 2026-07-18
+
+* 🔼 Updated alpine image to `3.24`
+* 🔼 Updated mpd to `0.24.12-r0`
+* 🔼 Updated myMPD to `25.1.1-r0`
+* 🔼 Updated upmpdcli to `1.9.17-r0`
+* 🔼 Dropped deprecated values ['armv7', 'armhf', 'i386'] in App config 'arch'
+
 ## 3.0.0 - 2026-02-06
 
 * 🔼 Updated alpine image to `3.23`
