@@ -8,3 +8,6 @@ MPD is a free and open source music player with an UPnP Media Renderer
 
 ## [snapcastserver](https://github.com/rw-django-fan-2020/hassio-addons/tree/main/snapcastserver)
 snapcast server and client for multi room audio
+
+## [aubio_beat](https://github.com/rw-django-fan-2020/hassio-addons/tree/main/aubio_beat)
+beat detector server based on aubio
