@@ -1,3 +1,0 @@
-build_from:
-  aarch64: python:python:3.14.6-slim
-  amd64: python:python:3.14.6-slim
