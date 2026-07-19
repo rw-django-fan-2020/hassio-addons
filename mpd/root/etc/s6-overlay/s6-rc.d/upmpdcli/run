@@ -1,0 +1,20 @@
+#!/command/with-contenv bashio
+set -e
+bashio::net.wait_for 6600
+
+# Enable Jemalloc for better memory handling
+export LD_PRELOAD="/usr/local/lib/libjemalloc.so.2"
+
+CONFIG_FOLDER="/addons/mpd/upmpdcli"
+
+if ! [ -d "$CONFIG_FOLDER" ]; then
+  mkdir -p "$CONFIG_FOLDER"
+  bashio::log.info "mkdir $CONFIG_FOLDER"
+
+  cp /etc/upmpdcli.conf "$CONFIG_FOLDER/upmpdcli.conf"
+  bashio::log.info "cp /etc/upmpdcli.conf "$CONFIG_FOLDER/upmpdcli.conf""
+fi
+
+bashio::log.info  'Start upmpdcli'
+bashio::log.info  "upmpdcli -c $CONFIG_FOLDER/upmpdcli.conf"
+upmpdcli -c "$CONFIG_FOLDER/upmpdcli.conf"

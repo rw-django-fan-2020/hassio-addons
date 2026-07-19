@@ -1,3 +1,36 @@
+## 3.1.0 - 2026-07-18
+
+* 🔼 Updated alpine image to `3.24`
+* 🔼 Updated mpd to `0.24.12-r0`
+* 🔼 Updated myMPD to `25.1.1-r0`
+* 🔼 Updated upmpdcli to `1.9.17-r0`
+* 🔼 Dropped deprecated values ['armv7', 'armhf', 'i386'] in App config 'arch'
+
+## 3.0.0 - 2026-02-06
+
+* 🔼 Updated alpine image to `3.23`
+* 🔼 Updated mpd to `0.24.8-r0`
+* 🔼 Updated myMPD to `23.0.1-r0`
+* 🔼 Updated upmpdcli to `1.9.7-r0`
+
+
+## 2.1.0 - 2025-07-26
+
+* 🔼 Add DLNA Server/Renderer and Bridge upmpdcli
+
+
+## 2.0.0 - 2025-07-04
+
+* 🔼 Replace ympd with myMPD
+
+
+## 1.9.0 - 2025-07-03
+
+* 🔼 Updated alpine image to `3.22`
+* 🔼 Updated mpc to `0.35-r0`
+* 🔼 Updated mpd to `0.24.4-r1`
+
+
 ## 1.8.0 - 2024-05-08
 
 * 🔼 Updated alpine image to `3.19`
