@@ -8,6 +8,6 @@ build_from:
 #https://pkgs.alpinelinux.org/packages?name=upmpdcli&branch=v3.24&repo=&arch=&origin=&flagged=&maintainer=
 args:
   MPC_VERSION: "0.35-r0"
-  MPD_VERSION: "0.24.12-r0"
+  MPD_VERSION: "0.24.15-r0"
   MYMPD_VERSION: "25.1.1-r0"
   UPMPDCLI_VERSION: "1.9.17-r0"

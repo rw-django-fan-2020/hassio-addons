@@ -1,3 +1,7 @@
+## 3.2.0 - 2026-10-10
+
+* 🔼 Updated mpd to `0.24.15-r0`
+
 ## 3.1.0 - 2026-07-18
 
 * 🔼 Updated alpine image to `3.24`
